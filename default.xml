@@ -16,7 +16,7 @@
 	  fetch="https://github.com/opengapps/"  />
   <remote name="opengapps-gitlab"
 	  fetch="https://gitlab.opengapps.org/opengapps/"  />
-  <default revision="refs/tags/android-7.1-opengapps.1_r42"
+  <default revision="refs/tags/android-7.1.1_r42"
            remote="aosp"
            sync-j="4" />
 
