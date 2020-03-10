@@ -27,7 +27,7 @@
   <project path="bootable/bootloader/uboot-imx" name="uboot-imx" remote="udooboard-github" revision="2015.04.imx" />
 
   <!-- UDOOboard build -->
-  <project path="build" name="android_udoo_platform_build" remote="udooboard-github" revision="android-7.1-opengapps" >
+  <project path="build" name="android_udoo_platform_build" remote="tp-github" revision="android-7.1-opengapps" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
