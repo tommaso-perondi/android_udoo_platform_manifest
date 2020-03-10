@@ -10,8 +10,10 @@
            fetch="git://git.osdn.jp/gitroot/android-x86/" />
   <remote  name="UberTC"
            fetch="https://bitbucket.org/UBERTC/" />
-  <remote  name="udooboard-github"
+  <remote  name="tp-github"
 	  fetch="git://github.com/tommaso-perondi/" />
+  <remote  name="udooboard-github"
+	  fetch="git://github.com/UDOOBoard/" />
   <remote name="opengapps"
 	  fetch="https://github.com/opengapps/"  />
   <remote name="opengapps-gitlab"
@@ -25,31 +27,31 @@
   <project path="bootable/bootloader/uboot-imx" name="uboot-imx" remote="udooboard-github" revision="2015.04.imx" />
 
   <!-- UDOOboard build -->
-  <project path="build" name="android_udoo_platform_build" remote="udooboard-github" revision="android-7.1-opengapps-opengapps" >
+  <project path="build" name="android_udoo_platform_build" remote="udooboard-github" revision="android-7.1-opengapps" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
   <!-- UDOOboard device layer -->
-  <project path="device/udoo" name="android_device_udoo" remote="udooboard-github" revision="android-7.1-opengapps" />
+  <project path="device/udoo" name="android_device_udoo" remote="tp-github" revision="android-7.1-opengapps" />
 
   <!-- projects added by UDOOboard -->
-  <project path="bootable/recovery" name="Team-Win-Recovery-Project" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="device/fsl-codec" name="android_device_fsl-codec" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="device/fsl-proprietary" name="android_device_fsl-proprietary" remote="udooboard-github" revision="android-7.1-opengapps" />
+  <project path="bootable/recovery" name="Team-Win-Recovery-Project" remote="udooboard-github" revision="android-7.1" />
+  <project path="device/fsl-codec" name="android_device_fsl-codec" remote="udooboard-github" revision="android-7.1" />
+  <project path="device/fsl-proprietary" name="android_device_fsl-proprietary" remote="udooboard-github" revision="android-7.1" />
   <project path="external/bash" name="android_external_bash" remote="udooboard-github" revision="cm-14.1" />
   <project path="external/bossacjni" name="android_external_bossacjni" remote="udooboard-github" revision="master" />
-  <project path="external/busybox" name="omnirom/android_external_busybox" remote="github" revision="android-7.1-opengapps" />
-  <project path="external/fsl_imx_omx" name="android_external_fsl_imx_omx" remote="udooboard-github" revision="android-7.1-opengapps" />
+  <project path="external/busybox" name="omnirom/android_external_busybox" remote="github" revision="android-7.1" />
+  <project path="external/fsl_imx_omx" name="android_external_fsl_imx_omx" remote="udooboard-github" revision="android-7.1" />
   <project path="external/fuse" name="LineageOS/android_external_fuse" remote="github" revision="cm-14.1" />
   <project path="external/uicommon" name="LineageOS/android_external_cyanogen_UICommon" remote="github" revision="cm-14.1" />
   <project path="external/libncurses" name="LineageOS/android_external_libncurses" remote="github" revision="cm-14.1" />
   <project path="external/libtruezip" name="LineageOS/android_external_libtruezip" remote="github" revision="cm-14.1" />
-  <project path="external/linux-firmware-imx" name="android_external_linux-firmware-imx" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="external/linux-lib" name="android_external_linux-lib" remote="udooboard-github" revision="android-7.1-opengapps" />
+  <project path="external/linux-firmware-imx" name="android_external_linux-firmware-imx" remote="udooboard-github" revision="android-7.1" />
+  <project path="external/linux-lib" name="android_external_linux-lib" remote="udooboard-github" revision="android-7.1" />
   <project path="external/ntfs-3g" name="LineageOS/android_external_ntfs-3g" remote="github" revision="cm-14.1" />
   <project path="external/udooneo-m4uploader" name="udooneo-m4uploader" remote="udooboard-github" revision="master" />
   <project path="external/udoofota" name="udoofota" remote="udooboard-github" revision="master" />
-  <project path="hardware/imx" name="android_hardware_imx" remote="udooboard-github" revision="android-7.1-opengapps" />
+  <project path="hardware/imx" name="android_hardware_imx" remote="udooboard-github" revision="android-7.1" />
   <project path="hardware/ti/wlan" name="android_hardware_ti_wlan" remote="udooboard-github" revision="android-6.0.1" />
   <project path="hardware/ti/wpan" name="android_hardware_ti_wpan" remote="udooboard-github" revision="android-6.0.1" />
   <project path="packages/apps/AdbWireless" name="android_packages_apps_AdbWireless" remote="udooboard-github" revision="android-6.0.1" />
@@ -63,35 +65,35 @@
   <project path="vendor/supersu" name="android_vendor_supersu" remote="udooboard-github" revision="master" />
 
   <!-- AOSP projects changed by UDOOboard and NXP -->
-  <project path="bionic" name="android_bionic" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="external/dnsmasq" name="android_external_dnsmasq" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="external/skia" name="android_external_skia" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="external/tinyalsa" name="android_external_tinyalsa" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="frameworks/av" name="android_frameworks_av" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="frameworks/ex" name="android_frameworks_ex" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="frameworks/opt/net/ethernet" name="android_frameworks_opt_net_ethernet" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="frameworks/support" name="android_frameworks_support" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="libcore" name="android_libcore" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="packages/apps/Gallery" name="android_packages_apps_Gallery" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="packages/apps/Gallery2" name="android_packages_apps_Gallery2" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="packages/apps/Launcher2" name="android_packages_apps_Launcher2" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="packages/apps/LegacyCamera" name="android_packages_apps_LegacyCamera" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="packages/apps/SoundRecorder" name="android_packages_apps_SoundRecorder" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="system/bt" name="android_system_bt" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="system/core" name="android_system_core" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="system/extras" name="android_system_extras" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="system/media" name="android_system_media" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="system/sepolicy" name="android_system_sepolicy" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="system/netd" name="android_system_netd" remote="udooboard-github" revision="android-7.1-opengapps" />
-  <project path="system/vold" name="android_system_vold" remote="udooboard-github" revision="android-7.1-opengapps" />
+  <project path="bionic" name="android_bionic" remote="udooboard-github" revision="android-7.1" />
+  <project path="external/dnsmasq" name="android_external_dnsmasq" remote="udooboard-github" revision="android-7.1" />
+  <project path="external/skia" name="android_external_skia" remote="udooboard-github" revision="android-7.1" />
+  <project path="external/tinyalsa" name="android_external_tinyalsa" remote="udooboard-github" revision="android-7.1" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="udooboard-github" revision="android-7.1" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="udooboard-github" revision="android-7.1" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="udooboard-github" revision="android-7.1" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="udooboard-github" revision="android-7.1" />
+  <project path="frameworks/ex" name="android_frameworks_ex" remote="udooboard-github" revision="android-7.1" />
+  <project path="frameworks/opt/net/ethernet" name="android_frameworks_opt_net_ethernet" remote="udooboard-github" revision="android-7.1" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="udooboard-github" revision="android-7.1" />
+  <project path="frameworks/support" name="android_frameworks_support" remote="udooboard-github" revision="android-7.1" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="udooboard-github" revision="android-7.1" />
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="udooboard-github" revision="android-7.1" />
+  <project path="libcore" name="android_libcore" remote="udooboard-github" revision="android-7.1" />
+  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="udooboard-github" revision="android-7.1" />
+  <project path="packages/apps/Gallery" name="android_packages_apps_Gallery" remote="udooboard-github" revision="android-7.1" />
+  <project path="packages/apps/Gallery2" name="android_packages_apps_Gallery2" remote="udooboard-github" revision="android-7.1" />
+  <project path="packages/apps/Launcher2" name="android_packages_apps_Launcher2" remote="udooboard-github" revision="android-7.1" />
+  <project path="packages/apps/LegacyCamera" name="android_packages_apps_LegacyCamera" remote="udooboard-github" revision="android-7.1" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="udooboard-github" revision="android-7.1" />
+  <project path="packages/apps/SoundRecorder" name="android_packages_apps_SoundRecorder" remote="udooboard-github" revision="android-7.1" />
+  <project path="system/bt" name="android_system_bt" remote="udooboard-github" revision="android-7.1" />
+  <project path="system/core" name="android_system_core" remote="udooboard-github" revision="android-7.1" />
+  <project path="system/extras" name="android_system_extras" remote="udooboard-github" revision="android-7.1" />
+  <project path="system/media" name="android_system_media" remote="udooboard-github" revision="android-7.1" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="udooboard-github" revision="android-7.1" />
+  <project path="system/netd" name="android_system_netd" remote="udooboard-github" revision="android-7.1" />
+  <project path="system/vold" name="android_system_vold" remote="udooboard-github" revision="android-7.1" />
   
   <!-- Unchanged from Android_x86 -->
   <!-- <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" remote="android_x86" revision="9c984105900b298e75f6bb105aef8dea9bd0f110" upstream="marshmallow-x86"/>
