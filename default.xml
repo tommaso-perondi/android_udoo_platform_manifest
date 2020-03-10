@@ -11,7 +11,11 @@
   <remote  name="UberTC"
            fetch="https://bitbucket.org/UBERTC/" />
   <remote  name="udooboard-github"
-           fetch="git://github.com/UDOOboard/" />
+	  fetch="git://github.com/UDOOboard/" />
+  <remote name="opengapps"
+	  fetch="https://github.com/opengapps/"  />
+  <remote name="opengapps-gitlab"
+	  fetch="https://gitlab.opengapps.org/opengapps/"  />
   <default revision="refs/tags/android-7.1.1_r42"
            remote="aosp"
            sync-j="4" />
@@ -491,4 +495,12 @@
   <project path="tools/swt" name="platform/tools/swt" />
   <project path="tools/test/connectivity" name="platform/tools/test/connectivity" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" />
+
+
+  <!-- OpenGAPPS -->
+
+  <project path="vendor/opengapps/build" name="aosp_build" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+  <project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+
 </manifest>
